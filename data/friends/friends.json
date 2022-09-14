@@ -1,23 +1,23 @@
 [
     {
-        "name": "Al",
+        "name": "Friend1",
         "email": "email",
         "birthdate": "12/27/1998",
         "phone": "800-800-8000",
         "id": 1
     },
     {
-        "name": "Bob",
+        "name": "Friend2",
         "email": "email2",
         "birthdate": "9/12/1998",
-        "phone": "415-666-0670",
+        "phone": "000-000-0000",
         "id": 2
     },
     {
-        "name": "Mo",
+        "name": "Friend3",
         "email": "email2",
-        "birthdate": "4/12/1977",
-        "phone": "314-976-5500",
+        "birthdate": "9/12/1998",
+        "phone": "000-000-0000",
         "id": 3
     }
 ]
