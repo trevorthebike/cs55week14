@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/layout';
-import { getAllIds,getData} from '../lib/data';
+import Layout from '../../components/layout';
+import { getAllIds,getData} from '../../lib/data';
 
 export async function getStaticProps({ params }) {
-  let filename = 'persons.json';
+  let filename = 'friends.json';
   const itemData = await getData(params.id, filename);
   return {
     props: {
@@ -14,7 +14,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllIds('persons.json');
+  const paths = getAllIds('friends.json');
   return {
     paths,
     fallback: false
@@ -27,10 +27,7 @@ export default function Entry({ itemData,itemData1 }) {
       <article className="card col-6">
         <div className="card-body">
           <h5 className="card-title">{itemData.name}</h5>
-          <h6 className="card-subtitle mb-2 text-muted">{itemData.phone}</h6>
-          <p className="card-text">{itemData.birthdate}</p>
-          <a href={'mailto:' + itemData.email} className="card-link">{itemData.email}</a>
-          <h2><a href ={'friends/' + itemData.id}> Friend Link</a></h2>
+          <h6 className="card-title">{"my favorite is: " +itemData.favorite}</h6>
         </div>
       </article>
   </Layout>
