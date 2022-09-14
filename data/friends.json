@@ -1,17 +1,17 @@
 [
     {
         "name": "Al's Friend",
-        "favorite": "Bob",
+        "favorite": "Al",
         "id": 1
     },
     {
         "name": "Bob's Friend",
-        "favorite": "Mo",
+        "favorite": "Bob",
         "id": 2
     },
     {
         "name": "Mo's Friend",
-        "favorite": "Al",
+        "favorite": "Mo",
         "id": 3
     }
 ]

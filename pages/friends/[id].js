@@ -26,8 +26,9 @@ export default function Entry({ itemData,itemData1 }) {
     <Layout>
       <article className="card col-6">
         <div className="card-body">
-          <h5 className="card-title">{itemData.name}</h5>
-          <h6 className="card-title">{"my favorite is: " +itemData.favorite}</h6>
+          <h2 className="card-title">{itemData.name}</h2>
+          <h3 className="card-title">{"Favorite: " + itemData.favorite}</h3>
+          <a href={"../" + itemData.id} > Favorite Friend Link </a>
         </div>
       </article>
   </Layout>

@@ -26,11 +26,13 @@ export default function Entry({ itemData,itemData1 }) {
     <Layout>
       <article className="card col-6">
         <div className="card-body">
-          <h5 className="card-title">{itemData.name}</h5>
-          <h6 className="card-subtitle mb-2 text-muted">{itemData.phone}</h6>
+          <h4 className="card-title">{itemData.name}</h4>
+          <p className="card-subtitle">{itemData.phone}</p>
           <p className="card-text">{itemData.birthdate}</p>
+          <p> {"Email Link: "}</p>
           <a href={'mailto:' + itemData.email} className="card-link">{itemData.email}</a>
-          <h2><a href ={'friends/' + itemData.id}> Friend Link</a></h2>
+          <h4></h4>
+          <h4><a href ={'friends/' + itemData.id}> Friend Link</a></h4>
         </div>
       </article>
   </Layout>

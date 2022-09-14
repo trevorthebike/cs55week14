@@ -5,22 +5,23 @@ export default function Layout( { children, home } ) {
   return (
     <div>
       <Head>
-        <title>Basic Next.js App</title>
+        <title>CS55.13 Week 4</title>
       </Head>
       <header>
         <nav>
-          <a href="https://santarosa.edu">SRJC</a>
+          <h1>CS55.13 Week 4 Trevor </h1> <br></br>
+          <a href="https://github.com/trevorthebike/cs55week4">GitHub Link</a>
         </nav>
       </header>
       <main>{children}</main>
       {!home && (
           <Link href="/">
-            <a className="btn btn-primary mt-3">← Back to home</a>
+            <a className="btn btn-primary mt-2">← Back to home</a>
           </Link>
         )
       }
       <footer>
-        <p>The footer</p>
+        <p>This is my next.js Website</p>
       </footer>
     </div>
   );
