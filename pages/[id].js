@@ -34,6 +34,19 @@ export default function Entry({ itemData,itemData1 }) {
           <a href={'mailto:' + itemData.email} className="card-link">{itemData.email}</a>
           <h4></h4>
           <h4><a href ={'friends/' + itemData.id}> Friend Link</a></h4>
+          {itemData.related ? 
+          <h2>Related Persons</h2> : null
+        }
+        {itemData.related ? 
+          itemData.related.map(
+            ({ id, name }) => (
+              <Link key={id} href={`/${id}`}>
+                <a className="list-group-item list-group-item-action">{name}</a>
+              </Link>
+            )
+          ) 
+          : <a> "no friends" </a>
+        }
         </div>
       </article>
   </Layout>

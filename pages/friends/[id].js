@@ -30,6 +30,19 @@ export default function Entry({ itemData,itemData1 }) {
           <h2 className="card-title">{itemData.name}</h2>
           <h3 className="card-title">{"Favorite: " + itemData.favorite}</h3>
           <a href={"../" + itemData.id} > Favorite Friend Link </a>
+        {itemData.related ? 
+          <h2>Related Persons</h2> : null
+        }
+        {itemData.related ? 
+          itemData.related.map(
+            ({ id, name }) => (
+              <Link key={id} href={`/${id}`}>
+                <a>{name}</a>
+              </Link>
+            )
+          ) 
+          : null
+        }
         </div>
       </article>
   </Layout>
