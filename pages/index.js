@@ -12,7 +12,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allData }) {
+export default function Home({ allData }) { 
   return (
       <Layout home>
         <h3> Sorted names with links </h3>
