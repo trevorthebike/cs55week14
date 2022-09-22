@@ -45,7 +45,7 @@ export default function Entry({ itemData,itemData1 }) {
               </Link>
             )
           ) 
-          : <a> "no friends" </a>
+          : null
         }
         </div>
       </article>
