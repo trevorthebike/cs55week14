@@ -5,12 +5,12 @@ export default function Layout( { children, home } ) {
   return (
     <div>
       <Head>
-        <title>CS55.13 Week 4</title>
+        <title>CS55.13 Week 12</title>
       </Head>
       <header>
         <nav>
-          <h1>CS55.13 Week 4 Trevor </h1> <br></br>
-          <a href="https://github.com/trevorthebike/cs55week4">GitHub Link</a>
+          <h1>CS55.13 Week 12 </h1> <br></br>
+          <a href="https://github.com/trevorthebike/cs55week12">GitHub Link</a>
         </nav>
       </header>
       <main>{children}</main>
