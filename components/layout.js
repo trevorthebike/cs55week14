@@ -10,7 +10,7 @@ export default function Layout( { children, home } ) {
       <header>
         <nav>
           <h1>CS55.13 Week 12 </h1> <br></br>
-          <a href="https://github.com/trevorthebike/cs55week12">GitHub Link</a>
+          <a href="https://github.com/trevorthebike/cs55-week12">GitHub Link</a>
         </nav>
       </header>
       <main>{children}</main>
