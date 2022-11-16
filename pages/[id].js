@@ -15,38 +15,22 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   let filename = 'persons.json';
-  const paths = getAllIds(filename);
+  const paths = await getAllIds(filename);
   return {
     paths,
     fallback: false
   };
 }
 
-export default function Entry({ itemData,itemData1 }) {
+export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card col-6">
         <div className="card-body">
-          <h4 className="card-title">{itemData.name}</h4>
-          <p className="card-subtitle">{itemData.phone}</p>
-          <p className="card-text">{itemData.birthdate}</p>
-          <p> {"Email Link: "}</p>
-          <a href={'mailto:' + itemData.email} className="card-link">{itemData.email}</a>
-          <h4></h4>
-          <h4><a href ={'friends/' + itemData.id}> Friend Link</a></h4>
-          {itemData.related ? 
-          <h2>Related Persons</h2> : null
-        }
-        {itemData.related ? 
-          itemData.related.map(
-            ({ id, name }) => (
-              <Link key={id} href={`/${id}`}>
-                <a className="list-group-item list-group-item-action">{name}</a>
-              </Link>
-            )
-          ) 
-          : null
-        }
+          <h4 className="card-title">{itemData.post_title}</h4>
+          <h4 className="card-title">{itemData.post_author}</h4>
+          <p className="card-subtitle">{itemData.post_date}</p>
+          <p className="card-text">{itemData.post_content}</p>
         </div>
       </article>
   </Layout>

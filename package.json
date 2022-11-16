@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watchAll"
-
   },
   "dependencies": {
+    "got": "^9.6.0",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
