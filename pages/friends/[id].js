@@ -22,27 +22,15 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Entry({ itemData,itemData1 }) {
+export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card col-6">
         <div className="card-body">
-          <h2 className="card-title">{itemData.name}</h2>
-          <h3 className="card-title">{"Favorite: " + itemData.favorite}</h3>
-          <a href={"../" + itemData.id} > Favorite Friend Link </a>
-        {itemData.related ? 
-          <h2>Related Persons</h2> : null
-        }
-        {itemData.related ? 
-          itemData.related.map(
-            ({ id, name }) => (
-              <Link key={id} href={`/${id}`}>
-                <a>{name}</a>
-              </Link>
-            )
-          ) 
-          : null
-        }
+          <h4 className="card-title">{itemData.post_title}</h4>
+          <h4 className="card-title">{itemData.post_author}</h4>
+          <p className="card-subtitle">{itemData.post_date}</p>
+          <p className="card-text">{itemData.post_content}</p>
         </div>
       </article>
   </Layout>
