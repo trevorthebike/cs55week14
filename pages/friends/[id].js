@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   let filename = 'friends.json';
-  const paths = getAllIds(filename);
+  const paths = await getAllIds(filename);
   return {
     paths,
     fallback: false
