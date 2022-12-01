@@ -30,7 +30,7 @@ export default function Entry({ itemData }) {
           <h4 className="card-title">{itemData.post_title}</h4>
           <h4 className="card-title">{itemData.post_author}</h4>
           <p className="card-subtitle">{itemData.post_date}</p>
-          <p className="card-text">{itemData.post_content}</p>
+          <div className = "card-text" dangerouslySetInnerHTML = {{__html: itemData.post_content}} />
         </div>
       </article>
   </Layout>

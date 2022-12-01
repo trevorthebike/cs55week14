@@ -21,7 +21,7 @@ export default function Layout( { children, home } ) {
         )
       }
       <footer>
-        <p>This is my next.js Website</p>
+        <p>This is my next.js website</p>
       </footer>
     </div>
   );
