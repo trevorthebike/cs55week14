@@ -20,7 +20,7 @@ export default function Layout( { children, home } ) {
         )
       }
       <footer>
-      <a href="https://github.com/trevorthebike/cs55-week14">GitHub Link</a>
+      <a href="https://github.com/trevorthebike/cs55week14">GitHub Link</a>
       </footer>
     </div>
   );
