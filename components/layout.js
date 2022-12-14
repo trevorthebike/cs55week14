@@ -5,12 +5,11 @@ export default function Layout( { children, home } ) {
   return (
     <div>
       <Head>
-        <title>CS55.13 Week 12</title>
+        <title>CS55.13 Week 14</title>
       </Head>
       <header>
         <nav>
-          <h1>CS55.13 Week 12 </h1> <br></br>
-          <a href="https://github.com/trevorthebike/cs55-week12">GitHub Link</a>
+          <h1>CS55.13 Week 14 </h1> <br></br>
         </nav>
       </header>
       <main>{children}</main>
@@ -21,7 +20,7 @@ export default function Layout( { children, home } ) {
         )
       }
       <footer>
-        <p>This is my next.js website</p>
+      <a href="https://github.com/trevorthebike/cs55-week14">GitHub Link</a>
       </footer>
     </div>
   );

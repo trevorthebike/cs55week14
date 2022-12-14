@@ -1,21 +1,18 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../../components/layout';
-import { getAllIds,getData} from '../../lib/data';
+import { getAllIdsProduct, getDataProduct} from '../../lib/data';
 
 export async function getStaticProps({ params }) {
-  let filename = 'friends.json';
-  const itemData = await getData(params.id, filename);
+  const itemData = await getDataProduct(params.id);
   return {
     props: {
       itemData,
-    }
+    },
+    revalidate: 10,
   };
 }
 
 export async function getStaticPaths() {
-  let filename = 'friends.json';
-  const paths = await getAllIds(filename);
+  const paths = await getAllIdsProduct();
   return {
     paths,
     fallback: false
@@ -28,9 +25,9 @@ export default function Entry({ itemData }) {
       <article className="card col-6">
         <div className="card-body">
           <h4 className="card-title">{itemData.post_title}</h4>
-          <h4 className="card-title">{itemData.post_author}</h4>
-          <p className="card-subtitle">{itemData.post_date}</p>
-          <p className="card-text">{itemData.post_content}</p>
+          <h2 className = "card-title">Name: {itemData.new_name} </h2>
+          <h2 className = "card-title">Price: {itemData.new_price} </h2>
+          <h2 className = "card-title">Color: {itemData.new_color} </h2>
         </div>
       </article>
   </Layout>

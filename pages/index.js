@@ -8,23 +8,24 @@ export async function getStaticProps() {
   return {
     props: {
       allData
-    }
+    },
+    revalidate: 10,
   }
 }
 
-export default function Home({ allData }) { 
+export default function Home() { 
   return (
       <Layout home>
-        <h3> Wordpress Posts </h3>
-        <div className="list-group">
-          {allData ? 
-          allData.map(({ id, name }) => (
-            <Link key={id} href={`/${id}`}>
-              <a className="list-group-item list-group-item-action">{name}</a>
-            </Link>
-          ))
-          : null
-        }
+        <div className = "homediv">
+        <Link href={`/products/home`}>
+          <a className = "mainpage">Products List</a>
+        </Link>
+        <Link href={`/foods/home`}>
+          <a className = "mainpage">Foods List</a>
+        </Link>
+        <Link href={`/contacts/home`}>
+          <a className = "mainpage">Contacts List</a>
+        </Link>
         </div>
       </Layout>
   );
