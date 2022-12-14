@@ -1,4 +1,4 @@
-/*import Layout from '../components/layout';
+import Layout from '../components/layout';
 import { getAllIds, getData, getDataProduct} from '../lib/data';
 
 export async function getStaticProps({ params }) {
@@ -34,4 +34,4 @@ export default function Entry({ itemData }) {
       </article>
   </Layout>
   );
-}*/
+}
